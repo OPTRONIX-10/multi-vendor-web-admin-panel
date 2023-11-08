@@ -1,16 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:multi_vendor_app_admin_panel_web/views/screens/side_bar_screens/widgets/row_header_widget.dart';
 
 class OrdersScren extends StatelessWidget {
   const OrdersScren({super.key});
   static const routname = '/OrdersScreen';
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.topLeft,
-      padding: EdgeInsets.all(10),
-      child: Text(
-        'Orders',
-        style: TextStyle(fontWeight: FontWeight.w700, fontSize: 36),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            alignment: Alignment.topLeft,
+            padding: EdgeInsets.all(10),
+            child: Text(
+              'Orders',
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 36),
+            ),
+          ),
+          Row(
+            children: [
+              RowHeader('IMAGE', 1),
+              RowHeader('FULL NAME', 3),
+              RowHeader('CITY', 2),
+              RowHeader('STATE', 2),
+              RowHeader('ACTION', 1),
+              RowHeader('VIEW MORE',1),
+              
+            
+            ],
+          )
+        ],
       ),
     );
   }

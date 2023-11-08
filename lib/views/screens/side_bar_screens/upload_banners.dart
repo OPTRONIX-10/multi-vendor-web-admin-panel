@@ -4,6 +4,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:multi_vendor_app_admin_panel_web/views/screens/side_bar_screens/widgets/bannerWidget.dart';
 
 class UploadBannersScreen extends StatefulWidget {
   const UploadBannersScreen({super.key});
@@ -129,7 +130,15 @@ class _UploadBannersScreenState extends State<UploadBannersScreen> {
                     ElevatedButton.styleFrom(backgroundColor: Colors.blue[900]),
               )
             ],
-          )
+          ),
+          Divider(
+            color: Colors.green[900],
+          ),
+          Text(
+            'Banners',
+            style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+          ),
+          BannerWidget()
         ],
       ),
     );
